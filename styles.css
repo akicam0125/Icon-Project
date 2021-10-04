@@ -1,0 +1,110 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: Arial;
+}
+
+
+img{
+  display: block;
+  width: 100%;
+}
+h2{
+    font-size: 24px;
+    text-align: center;
+}
+.container {
+  font-size: 14px;
+  text-align: center;
+  max-width: 800px;
+  padding: 25px;
+  margin: 0 auto;
+}
+.byline {
+  padding: 8px;
+}
+.intro {
+  padding: 10px;
+}
+.solutions {
+  padding: 10px;
+}
+.icon {
+  border-style: solid;
+  padding: 5px;
+}
+.insta.photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.caption {
+  font-style: italic;
+}
+.header.photo {
+  padding: 10;
+  margin-left: auto;
+  margin-right: auto;
+}
+.solutionbullets {
+  margin-right: 15px;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .flex > div {
+      flex-basis: 30%;
+    }
+
+    .box {
+      border: 1px solid black;
+        margin: 0.5em;
+        padding: 0.5em;
+        flex: 160px;
+    }
+
+}
+
+
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+  img {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  .caption {
+    font-style: italic;
+    text-align: center;
+  }
